@@ -1,8 +1,13 @@
 from typing import Any, Optional
 
-def linear_search(list:list[Any], target:Any) -> Any:``
+def linear_search(list:list[Any], target:Any) -> Any:
     """
-    Searching for the position of target in the list 
+    Searching for the position of target in the list. 
+
+    Algorithm Must...
+    1) return a value
+    2) complete execution in a finite amount of time
+    3) must output the same result for a given input set 
 
     Args:
         list (_type_): _description_
@@ -15,3 +20,14 @@ def linear_search(list:list[Any], target:Any) -> Any:``
         if list[i] == target:
             return i
     return None
+
+def verify(index: Any) -> None:
+    if index is not None:
+        print("Target found at index: ", index)
+    else:
+        print("Target not found in list")
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+result = linear_search(numbers,12)
+verify(result)
