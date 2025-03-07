@@ -6,15 +6,11 @@ pub trait Sorter {
 
 
 
-pub fn sort<T, S>(slice: &mut [T])
-where 
-    T: Ord, 
-    S:Sorter 
-{
+pub fn sort<T, S>(slice: &mut [T]) where T: Ord, S:Sorter {
     S::sort(slice)
 }
 
-//mod bubblesort;
+mod bubblesort;
 
 
 
@@ -27,12 +23,12 @@ mod tests {
     use super::*;
 
     struct StdSorter;
+    
     impl Sorter for StdSorter {
-    fn sort<T>(slice: &mut [T])
-    where
-        T: Ord {
-            slice.sort()
-    }
+
+        fn sort<T>(slice: &mut [T]) where T: Ord {
+                slice.sort()
+            }
     }
 
     #[test]
