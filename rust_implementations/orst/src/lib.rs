@@ -11,7 +11,7 @@ pub fn sort<T, S>(slice: &mut [T]) where T: Ord, S:Sorter {
 }
 
 mod bubblesort;
-
+mod insertion_sort;
 
 
 
